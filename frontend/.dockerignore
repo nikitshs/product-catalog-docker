@@ -1,0 +1,9 @@
+cat > frontend/.dockerignore <<'EOF'
+node_modules
+dist
+.git
+.env
+npm-debug.log
+Dockerfile
+.dockerignore
+EOF

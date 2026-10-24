@@ -1,0 +1,9 @@
+cat > backend/.dockerignore <<'EOF'
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+README.md
+init.sql
+EOF
