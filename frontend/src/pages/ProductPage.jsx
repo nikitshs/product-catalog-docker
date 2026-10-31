@@ -1,4 +1,4 @@
-cat > frontend/src/pages/ProductPage.jsx <<'EOF'
+
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { deleteProduct, getProduct } from '../api.js';
@@ -67,7 +67,7 @@ export default function ProductPage() {
 
   if (error) {
     return (
-      <div>
+      <div className="container">
         <div className="alert error">{error}</div>
         <Link to="/" className="button secondary">
           Вернуться в каталог
@@ -94,7 +94,7 @@ export default function ProductPage() {
       </div>
 
       <div className="product-info">
-        <span className="badge">{getCategoryLabel(product.category)}</span>
+        <span className="badge" style={{position:'static', marginBottom:'12px'}}>{getCategoryLabel(product.category)}</span>
 
         <h1 className="detail-title">{product.name}</h1>
 
@@ -104,12 +104,12 @@ export default function ProductPage() {
           {product.description || 'Описание отсутствует.'}
         </p>
 
-        <p className="muted">
+        <p className="muted" style={{fontSize:'0.9rem'}}>
           Добавлен:{' '}
           {new Date(product.createdAt).toLocaleString('ru-RU')}
         </p>
 
-        <div className="card-actions">
+        <div className="card-actions" style={{marginTop:'24px'}}>
           <Link to="/" className="button secondary">
             ← В каталог
           </Link>
@@ -127,4 +127,3 @@ export default function ProductPage() {
     </section>
   );
 }
-EOF

@@ -1,4 +1,4 @@
-cat > backend/Dockerfile <<'EOF'
+
 FROM node:20-alpine
 
 WORKDIR /app
@@ -16,4 +16,3 @@ EXPOSE 5000
 USER node
 
 CMD ["node", "src/server.js"]
-EOF

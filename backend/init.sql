@@ -1,4 +1,4 @@
-cat > backend/init.sql <<'EOF'
+
 CREATE TABLE IF NOT EXISTS products (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
@@ -18,7 +18,7 @@ FROM (VALUES
   (
     'ASUS Vivobook 15 X1505ZA-EJ423',
     'Ноутбук 15.6 дюймов, Intel Core i5, 16 ГБ ОЗУ, SSD 512 ГБ, IPS-экран, подходит для работы и учебы.',
-    'https://picsum.photos/seed/asus-vivobook/600/400',
+    'https://dlcdnwebimgs.asus.com/gain/859297d3-da9f-4807-81e8-7a2fdf14204d/w800',
     74990.00,
     'laptops'
   ),
@@ -73,4 +73,3 @@ FROM (VALUES
   )
 ) AS t(name, description, image_url, price, category)
 WHERE NOT EXISTS (SELECT 1 FROM products);
-EOF

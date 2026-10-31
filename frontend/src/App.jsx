@@ -1,4 +1,4 @@
-cat > frontend/src/App.jsx <<'EOF'
+
 import { Routes, Route, Link } from 'react-router-dom';
 import CatalogPage from './pages/CatalogPage.jsx';
 import ProductPage from './pages/ProductPage.jsx';
@@ -10,12 +10,14 @@ export default function App() {
       <header className="app-header">
         <div className="container header-inner">
           <Link to="/" className="brand">
-            TechCatalog
+            DNS
           </Link>
 
           <nav>
             <Link to="/">Каталог</Link>
-            <Link to="/products/new">Добавить товар</Link>
+            <Link to="/products/new" className="button primary">
+                Добавить товар
+            </Link>
           </nav>
         </div>
       </header>
@@ -37,4 +39,3 @@ export default function App() {
     </div>
   );
 }
-EOF

@@ -1,4 +1,4 @@
-cat > frontend/src/utils/format.js <<'EOF'
+
 export const CATEGORY_OPTIONS = [
   { value: 'all', label: 'Все категории' },
   { value: 'laptops', label: 'Ноутбуки' },
@@ -26,4 +26,3 @@ export function formatPrice(value) {
     maximumFractionDigits: 2,
   }).format(Number(value) || 0);
 }
-EOF

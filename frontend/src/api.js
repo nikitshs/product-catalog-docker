@@ -1,4 +1,4 @@
-cat > frontend/src/api.js <<'EOF'
+
 const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
 
 async function request(path, options = {}) {
@@ -56,4 +56,3 @@ export function deleteProduct(id) {
     method: 'DELETE',
   });
 }
-EOF

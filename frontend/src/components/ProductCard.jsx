@@ -1,4 +1,4 @@
-cat > frontend/src/components/ProductCard.jsx <<'EOF'
+
 import { Link } from 'react-router-dom';
 import { formatPrice, getCategoryLabel } from '../utils/format.js';
 
@@ -19,11 +19,11 @@ export default function ProductCard({ product, onDelete, deletingId }) {
             event.currentTarget.src = FALLBACK_IMAGE;
           }}
         />
+        {/* Badge теперь позиционируется абсолютно поверх картинки благодаря CSS */}
+        <span className="badge">{getCategoryLabel(product.category)}</span>
       </div>
 
       <div className="card-body">
-        <span className="badge">{getCategoryLabel(product.category)}</span>
-
         <h2 className="card-title">
           <Link to={`/products/${product.id}`}>{product.name}</Link>
         </h2>
@@ -35,21 +35,20 @@ export default function ProductCard({ product, onDelete, deletingId }) {
         <div className="card-price">{formatPrice(product.price)}</div>
 
         <div className="card-actions">
-          <Link className="button small" to={`/products/${product.id}`}>
+          <Link className="button primary small" to={`/products/${product.id}`}>
             Подробнее
           </Link>
 
           <button
             type="button"
-            className="button small danger"
+            className="button danger small"
             disabled={isDeleting}
             onClick={() => onDelete(product)}
           >
-            {isDeleting ? 'Удаление...' : 'Удалить'}
+            {isDeleting ? '...' : 'Удалить'}
           </button>
         </div>
       </div>
     </article>
   );
 }
-EOF

@@ -1,4 +1,4 @@
-cat > README.md <<'EOF'
+
 # Каталог товаров: React + Vite, Express, PostgreSQL, Docker Compose
 
 Учебное полнофункциональное веб-приложение: каталог компьютерной техники.
@@ -109,4 +109,3 @@ Health check:
 7. PostgreSQL возвращает данные.
 8. Express отдает JSON.
 9. React отображает карточки товаров.
-EOF

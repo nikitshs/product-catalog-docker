@@ -1,4 +1,4 @@
-cat > backend/src/server.js <<'EOF'
+
 require('dotenv').config();
 
 const express = require('express');
@@ -213,4 +213,3 @@ async function shutdown(signal) {
 
 process.on('SIGTERM', () => shutdown('SIGTERM'));
 process.on('SIGINT', () => shutdown('SIGINT'));
-EOF

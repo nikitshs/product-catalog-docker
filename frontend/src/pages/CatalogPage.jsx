@@ -1,4 +1,4 @@
-cat > frontend/src/pages/CatalogPage.jsx <<'EOF'
+
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard.jsx';
@@ -179,4 +179,3 @@ export default function CatalogPage() {
     </section>
   );
 }
-EOF

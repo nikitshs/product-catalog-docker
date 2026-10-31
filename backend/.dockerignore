@@ -1,4 +1,4 @@
-cat > backend/.dockerignore <<'EOF'
+
 node_modules
 npm-debug.log
 .env
@@ -6,4 +6,3 @@ npm-debug.log
 .gitignore
 README.md
 init.sql
-EOF

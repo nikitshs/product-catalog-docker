@@ -1,4 +1,4 @@
-cat > frontend/src/pages/CreateProductPage.jsx <<'EOF'
+
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { createProduct } from '../api.js';
@@ -177,4 +177,3 @@ export default function CreateProductPage() {
     </section>
   );
 }
-EOF
